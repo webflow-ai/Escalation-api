@@ -1,0 +1,23 @@
+# FastAPI and server dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# RAG and ML dependencies
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+numpy==1.24.3
+
+# LLM API clients
+google-generativeai==0.3.2
+
+# Testing dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+hypothesis==6.92.1
+httpx==0.25.2
+
+# CORS support
+python-multipart==0.0.6
