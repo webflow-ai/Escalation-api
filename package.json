@@ -1,0 +1,27 @@
+{
+  "name": "smart-escalation-api",
+  "version": "1.0.0",
+  "description": "AI-powered L1 customer support system with intelligent escalation",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "uvicorn src.main:app --reload",
+    "test": "pytest -v",
+    "test:property": "pytest tests/property -v",
+    "lint": "cd frontend && npm run lint"
+  },
+  "workspaces": [
+    "frontend"
+  ],
+  "keywords": [
+    "customer-support",
+    "rag",
+    "llm",
+    "escalation",
+    "fastapi",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}

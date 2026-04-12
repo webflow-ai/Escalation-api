@@ -223,13 +223,18 @@ class EscalationEngine:
             # If LLM call fails, escalate gracefully
             error_msg = str(e)
             
+            # Log the actual error for debugging
+            print(f"ERROR in escalation engine: {error_msg}")
+            import traceback
+            traceback.print_exc()
+            
             # Provide specific error context in explanation
             if "timeout" in error_msg.lower():
                 explanation = "Unable to generate response due to timeout, escalating to human agent"
             elif "rate limit" in error_msg.lower():
                 explanation = "Service temporarily busy, escalating to human agent"
             else:
-                explanation = "Unable to generate response, escalating to human agent"
+                explanation = f"Unable to generate response, escalating to human agent (Error: {error_msg})"
             
             return EscalationDecision(
                 action="escalation",
