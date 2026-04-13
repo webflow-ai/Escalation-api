@@ -53,7 +53,7 @@ const getApiUrl = (): string => {
  */
 export const askQuestion = async (question: string): Promise<ApiResponse> => {
   const apiUrl = getApiUrl();
-  const endpoint = apiUrl; // Use /api directly (not /api/ask)
+  const endpoint = `${apiUrl}/ask`; // Call /ask endpoint
 
   // Validate input
   if (!question || question.trim().length === 0) {
