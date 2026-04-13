@@ -4,9 +4,9 @@ pydantic-settings==2.1.0
 python-dotenv==1.0.0
 
 # RAG and ML dependencies
-sentence-transformers==2.2.2
+sentence-transformers==2.7.0
 faiss-cpu==1.8.0
-numpy==1.24.3
+numpy==1.26.4
 
 # LLM API clients
 google-generativeai==0.3.2
