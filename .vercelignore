@@ -8,6 +8,15 @@ venv/
 env/
 ENV/
 
+# Python backend (deploy to Render, not Vercel)
+api/
+src/
+requirements.txt
+runtime.txt
+render.yaml
+pyproject.toml
+.python-version
+
 # Testing
 tests/
 .pytest_cache/
