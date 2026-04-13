@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: escalation-api-backend
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn src.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: ARTICLES_DIR
+        value: data/articles
+      - key: EMBEDDING_MODEL
+        value: all-MiniLM-L6-v2
+      - key: RELEVANCE_THRESHOLD
+        value: "0.5"
+      - key: TOP_K_CHUNKS
+        value: "3"
+      - key: CHUNK_SIZE
+        value: "500"
+      - key: CHUNK_OVERLAP
+        value: "50"
+      - key: LLM_MODEL
+        value: gemini-1.5-flash
+      - key: LLM_TEMPERATURE
+        value: "0.3"
+      - key: CORS_ORIGINS
+        value: https://escalation-api-frontend.vercel.app,http://localhost:5173
