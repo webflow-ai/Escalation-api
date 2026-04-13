@@ -55,3 +55,7 @@ frontend/.env.local
 
 # Kiro
 .kiro/
+
+# Node
+node_modules/
+package-lock.json
