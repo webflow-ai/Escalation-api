@@ -11,9 +11,6 @@
     "test:property": "pytest tests/property -v",
     "lint": "cd frontend && npm run lint"
   },
-  "workspaces": [
-    "frontend"
-  ],
   "keywords": [
     "customer-support",
     "rag",
